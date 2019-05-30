@@ -1,0 +1,13 @@
+:root {
+    --azul: #0EB2D8;
+    --verde: #02BF6D;
+    --grisOscuro: #555555;
+    --grisClaro: #B9BABA;
+}
+
+@font-face {
+    font-family: "ebrima";
+    src: url("../fonts/ebrima.ttf");
+}
+
+/* ========= GLOBALES ========== */
