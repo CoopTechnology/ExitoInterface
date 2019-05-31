@@ -12,3 +12,10 @@ window.addEventListener('mouseup',function(event){
         topSearchBar.style.display = 'none';
     }
 });
+
+$(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $(this).toggleClass('active');
+    });
+});
