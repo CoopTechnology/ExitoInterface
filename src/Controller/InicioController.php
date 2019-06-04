@@ -15,8 +15,6 @@ class InicioController extends Controller{
      */
 
     public function indexAction() {
-//        return new Response('<html><h1>Hellow!</h1></html>');
         return $this->render('base.html.twig');
     }
-
 }

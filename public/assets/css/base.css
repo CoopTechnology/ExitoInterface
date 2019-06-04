@@ -3,6 +3,7 @@
     --azulHover: #13ADAA;
     --verdeOscuro: #0E7271;
     --grisOscuro: #2C2C31;
+    --grisOscuroClaro: #3d3d43;
     --grisClaro: #E4E9F0;
     --grisIconos: #757575;
 }
@@ -92,4 +93,12 @@ div#top-search-bar{
     background-color: white;
     position: fixed;
     animation-duration: 0.3s;
+}
+.holadiv{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+.holadiv p{
+    font-family: 'FontAwesome';
 }
