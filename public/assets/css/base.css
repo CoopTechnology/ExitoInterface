@@ -13,6 +13,25 @@
     src: url("../fonts/ebrima.ttf");
 }
 
+::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.21);
+    background-color: var(--grisIconos);
+}
+
 /* ========= GLOBALES ========== */
 body{
     background-color: var(--grisClaro);
@@ -44,6 +63,7 @@ header.header div.left-top-bar div.height60 div.menuPrincipalBtn{
 }
 header.header div.left-top-bar div.height60 div.menuPrincipalBtn:hover {
     background-color: var(--azulHover);
+    cursor: pointer;
 }
 header.header div.left-top-bar div.icono i{
     font-size: 1.5rem;
@@ -75,6 +95,12 @@ header.header div.right-top-bar div.icono{
     transition: all ease 0.2s;
 }
 header.header div.right-top-bar div.icono:hover{
+    cursor: pointer;
+}
+header.header div.right-top-bar div.icono:hover i{
+    color: var(--azul);
+}
+header.header div.right-top-bar div.icono:hover{
     background-color: #f3f3f3;
 }
 
@@ -93,12 +119,4 @@ div#top-search-bar{
     background-color: white;
     position: fixed;
     animation-duration: 0.3s;
-}
-.holadiv{
-    background-color: red;
-    width: 100px;
-    height: 100px;
-}
-.holadiv p{
-    font-family: 'FontAwesome';
 }

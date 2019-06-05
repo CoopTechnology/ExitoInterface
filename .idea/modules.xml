@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ExitoInterface.iml" filepath="$PROJECT_DIR$/.idea/ExitoInterface.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../exitoV4/.idea/exitoV4.iml" filepath="$PROJECT_DIR$/../exitoV4/.idea/exitoV4.iml" />
     </modules>
   </component>
 </project>

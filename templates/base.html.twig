@@ -63,7 +63,6 @@
         </div>
     </header>
 
-
     <div class="wrapper">
         <nav id="sidebar">
             <!-- Sidebar Header -->
@@ -97,73 +96,69 @@
 
             <!-- Sidebar Links -->
             <ul class="navElements">
-                <li class="navItem">
+                <li class="navItem {% block ResumenGeneralActivo %}{% endblock %}">
                     <a href="#"><i class="far fa-chart-bar"></i> Resumen General</a>
                 </li>
-                <li class="navItem">
+                <li class="navItem {% block PlataformaActivo %}{% endblock %}">
                     <a href="#"><i class="fas fa-stream"></i> Plataforma</a>
                 </li>
 
-                <li data-toggle="collapse" data-target="#gestionSocios" class="navItem collapsed">
+                <li data-toggle="collapse" data-target="#gestionSocios" class="navItem collapsed {% block GestionSociosActivo %}{% endblock %}">
                     <a href="#"><i class="fas fa-users"></i> Getión de Socios</a>
                 </li>
-                <ul class="sub-menu collapse" id="gestionSocios">
-                    <li>
-                        <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Socios</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Registrar socio(a)</a>
-                    </li>
-                </ul>
+                    <ul class="sub-menu collapse" id="gestionSocios">
+                        <li>
+                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Socios</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Registrar socio(a)</a>
+                        </li>
+                    </ul>
 
-                <li class="navItem">
+                <li class="navItem {% block CajaActivo %}{% endblock %}">
                     <a href="#"><i class="fas fa-cash-register"></i> Caja</a>
                 </li>
 
-                <li data-toggle="collapse" data-target="#aportaciones" class="navItem collapsed">
+                <li data-toggle="collapse" data-target="#aportaciones" class="navItem collapsed {% block AportacionesActivo %}{% endblock %}">
                     <a href="#"><i class="fas fa-dollar-sign"></i> Aportaciones</a>
                 </li>
-                <ul class="sub-menu collapse" id="aportaciones">
-                    <li>
-                        <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Aportaciones</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Aportaciones</a>
-                    </li>
-                </ul>
+                    <ul class="sub-menu collapse" id="aportaciones">
+                        <li>
+                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Aportaciones</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Aportaciones</a>
+                        </li>
+                    </ul>
 
-                <li data-toggle="collapse" data-target="#ahorros" class="navItem collapsed">
+                <li data-toggle="collapse" data-target="#ahorros" class="navItem collapsed {% block AhorrosActivo %}{% endblock %}">
                     <a href="#"><i class="fas fa-piggy-bank"></i> Ahorros</a>
                 </li>
-                <ul class="sub-menu collapse" id="ahorros">
-                    <li>
-                        <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Cuentas de Ahorro</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Ahorro</a>
-                    </li>
-                </ul>
+                    <ul class="sub-menu collapse" id="ahorros">
+                        <li>
+                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Cuentas de Ahorro</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Ahorro</a>
+                        </li>
+                    </ul>
 
-                <li data-toggle="collapse" data-target="#inversiones" class="navItem collapsed">
+                <li data-toggle="collapse" data-target="#inversiones" class="navItem collapsed {% block CtaInversionesActivo %}{% endblock %}">
                     <a href="#"><i class="fas fa-file-invoice-dollar"></i> Inversiones</a>
                 </li>
-                <ul class="sub-menu collapse" id="inversiones">
-                    <li>
-                        <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Ctas. Inversiones</a>
-                    </li>
-                    <li>
-                        <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Inversiones</a>
-                    </li>
-                </ul>
+                    <ul class="sub-menu collapse" id="inversiones">
+                        <li>
+                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Ctas. Inversiones</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Inversiones</a>
+                        </li>
+                    </ul>
             </ul>
         </nav>
     </div>
 
-        {% block body %}
-
-
-
-        {% endblock %}
+        {% block body %}{% endblock %}
 
         <script src="{{ asset('assets/js/jquery-3.3.1.js') }}"></script>
         <script src="{{ asset('assets/js/jquery-3.3.1.slim.min.js') }}"></script>
