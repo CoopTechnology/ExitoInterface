@@ -139,6 +139,12 @@ main div.pageHeader{
     padding: 0.85rem 3rem 0.3rem 3rem;
     margin-bottom: 20px;
 }
+main div.pageHeader h2.tituloPagina{
+    font-size: 1.5rem;
+}
+main div.pageHeader p.descripcionPagina{
+    font-size: 0.9rem;
+}
 main div.pageContent{
     width: 100%;
     margin-bottom: 20px;

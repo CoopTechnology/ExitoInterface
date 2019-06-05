@@ -30,7 +30,7 @@
             <div class="left-top-bar">
                 <div class="d-flex align-items-center pl-3 height60">
                     <div class="menuPrincipalBtn icono">
-                        <i class="zmdi zmdi-menu" id="sidebarCollapse"></i>
+                        <i class="zmdi zmdi-menu" id="sidebarCollapse" onclick="slidebarOptions();"></i>
                     </div>
                     <div class="logo">
                         <img src="{{ asset('assets/img/ExitoLOGO.svg') }}" alt="Exito Logo">
@@ -172,6 +172,19 @@
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('assets/js/base.js') }}"></script>
 
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script>
+                function slidebarOptions() {
+                    var sidebar = document.getElementById('sidebar');
+                    var broserWidth = window.innerWidth;
+
+                    if(broserWidth <= 1000){
+                        sidebar.style.position = "fixed";
+                    }else{
+                        sidebar.style.position = "static";
+                    }
+                }
+            </script>
+        {% endblock %}
     </body>
 </html>

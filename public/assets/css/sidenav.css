@@ -21,10 +21,9 @@
     height: calc(100vh - 60px);
     overflow: auto;
 }
-@media (max-width: 1000px) {
+@media (min-width: 1000px) {
     #sidebar {
-        position: fixed;
-        z-index: 8;
+        position: static;
     }
 }
 #sidebar.active {
@@ -88,7 +87,7 @@
     background-color: var(--grisOscuro);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     /* Reversing the behavior of the sidebar:
        it'll be rotated vertically and off canvas by default,
        collapsing in on toggle button click with removal of
