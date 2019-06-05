@@ -51,7 +51,7 @@
                         <i class="zmdi zmdi-search" onclick="showSearchBar();"></i>
                     </div>
                     <div class="d-inline-block icono">
-                        <i class="zmdi zmdi-apps"></i>
+                        <i class="zmdi zmdi-apps" onclick="showSearchBar();"></i>
                     </div>
                     <div class="d-inline-block icono">
                         <i class="zmdi zmdi-globe"></i>
@@ -62,6 +62,31 @@
                 </div>
             </div>
         </header>
+        <div class="dropdown-apps" id="dropdown-apps">
+            <ul class="apps-shortcuts">
+                <li>
+                    <a href="#">
+                        <i class="zmdi zmdi-email"></i>
+                        <span class="apps-noty">23</span>
+                        <span class="apps-label">Email</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="zmdi zmdi-file-text"></i>
+                        <span class="apps-label">Notas</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="more-apps">
+                <li>
+                    <a href="#"><i class="zmdi zmdi-camera"></i> Gallery</a>
+                </li>
+                <li>
+                    <a href="#"><i class="zmdi zmdi-comments"></i> Chat</a>
+                </li>
+            </ul>
+        </div>
 
         <div class="wrapper">
             <nav id="sidebar">
@@ -184,6 +209,17 @@
                         sidebar.style.position = "static";
                     }
                 }
+
+                $(window).resize(function() {
+                    var sidebar = document.getElementById('sidebar');
+                    var broserWidth = window.innerWidth;
+
+                    if(broserWidth <= 1000){
+                        sidebar.style.position = "fixed";
+                    }else{
+                        sidebar.style.position = "static";
+                    }
+                });
             </script>
         {% endblock %}
     </body>
