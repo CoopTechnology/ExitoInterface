@@ -62,9 +62,12 @@ header.header div.height60{
     height: 60px;
 }
 header.header div.left-top-bar div.height60 div.menuPrincipalBtn{
-    padding: 12px 10px;
+
     transition: all ease 0.2s;
     margin-right: 1.5rem;
+}
+header.header div.left-top-bar div.height60 div.menuPrincipalBtn i{
+    padding: 12px 10px;
 }
 header.header div.left-top-bar div.height60 div.menuPrincipalBtn:hover {
     background-color: var(--azulHover);
@@ -95,9 +98,11 @@ header.header div.right-top-bar{
 }
 header.header div.right-top-bar div.icono{
     margin-right: 0.5rem;
-    padding: 12px 10px;
     background-color: white;
     transition: all ease 0.2s;
+}
+header.header div.right-top-bar div.icono i{
+    padding: 12px 10px;
 }
 header.header div.right-top-bar div.icono:hover{
     cursor: pointer;

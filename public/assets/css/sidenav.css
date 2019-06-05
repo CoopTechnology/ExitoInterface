@@ -21,6 +21,12 @@
     height: calc(100vh - 60px);
     overflow: auto;
 }
+@media (max-width: 1000px) {
+    #sidebar {
+        position: fixed;
+        z-index: 8;
+    }
+}
 #sidebar.active {
     margin-left: -250px;
     transform: rotateY(100deg); /* Rotate sidebar vertically by 100 degrees. */
