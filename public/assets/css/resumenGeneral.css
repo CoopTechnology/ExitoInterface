@@ -1,0 +1,62 @@
+main div.pageContent .charts{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+main div.pageContent .charts .chart{
+    width: 31%;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: var(--grisOscuroClaro);
+    font-size: 0.9rem;
+}
+main div.pageContent .charts .chart ul{
+    list-style: none;
+    padding: 0;
+}
+main div.pageContent .charts .chart ul li label{
+    color: #777;
+}
+main div.pageContent .charts .chart .datosAnualesHead h3{
+    text-transform: uppercase;
+}
+main div.pageContent .charts .chart .datosAnualesHead{
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+main div.pageContent .charts .chart .datosAnualesMiddle{
+    padding: 0 1.5rem 0 1.5rem;
+}
+main div.pageContent .charts .chart .datosAnualesFooter{
+    height: 130px;
+    background-color: #26a69a;
+}
+/* ------------ */
+main div.pageContent .charts .chart .datosMensualesHead h3{
+    text-transform: uppercase;
+}
+main div.pageContent .charts .chart .datosMensualesHead{
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+main div.pageContent .charts .chart .datosMensualesMiddle{
+    padding: 0 1.5rem 0 1.5rem;
+}
+main div.pageContent .charts .chart .datosMensualesFooter{
+    height: 130px;
+    background-color: #b388ff;
+}
+/* ------- */
+main div.pageContent .charts .chart .datosDiariosHead h3{
+    text-transform: uppercase;
+}
+main div.pageContent .charts .chart .datosDiariosHead{
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+main div.pageContent .charts .chart .datosDiariosMiddle{
+    padding: 0 1.5rem 0 1.5rem;
+}
+main div.pageContent .charts .chart .datosDiariosFooter{
+    height: 130px;
+    background-color: var(--azul);
+}

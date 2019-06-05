@@ -14,151 +14,157 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-    <div class="top-search-bar animated slideInDown" id="top-search-bar">
-        <div class="container-fluid">
-            <div class="d-flex justify-content-center">
-                <div class="input-group py-2 w-50">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text" id="divLupaInputBuscadorGlobal"><i class="zmdi zmdi-search" id="lupaInputBuscadorGlobal"></i></div>
+        <div class="top-search-bar animated slideInDown" id="top-search-bar">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-center">
+                    <div class="input-group py-2 w-50">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" id="divLupaInputBuscadorGlobal"><i class="zmdi zmdi-search" id="lupaInputBuscadorGlobal"></i></div>
+                        </div>
+                        <input type="text" class="form-control top-search-input" placeholder="Buscar..." id="inputBuscadorGlobal">
                     </div>
-                    <input type="text" class="form-control top-search-input" placeholder="Buscar..." id="inputBuscadorGlobal">
                 </div>
             </div>
         </div>
-    </div>
-    <header class="container-fluid header d-flex justify-content-between">
-        <div class="left-top-bar">
-            <div class="d-flex align-items-center pl-3 height60">
-                <div class="menuPrincipalBtn icono">
-                    <i class="zmdi zmdi-menu" id="sidebarCollapse"></i>
+        <header class="container-fluid header d-flex justify-content-between">
+            <div class="left-top-bar">
+                <div class="d-flex align-items-center pl-3 height60">
+                    <div class="menuPrincipalBtn icono">
+                        <i class="zmdi zmdi-menu" id="sidebarCollapse"></i>
+                    </div>
+                    <div class="logo">
+                        <img src="{{ asset('assets/img/ExitoLOGO.svg') }}" alt="Exito Logo">
+                    </div>
+                    <div class="w-100 align-items-center justify-content-end pr-3 height60 menuMobil">
+                        <div class="d-inline-block icono mr-3">
+                            <i class="zmdi zmdi-search" onclick="showSearchBar();"></i>
+                        </div>
+                        <div class="d-inline-block icono mr-2">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="logo">
-                    <img src="{{ asset('assets/img/ExitoLOGO.svg') }}" alt="Exito Logo">
-                </div>
-                <div class="w-100 align-items-center justify-content-end pr-3 height60 menuMobil">
-                    <div class="d-inline-block icono mr-3">
+            </div>
+            <div class="right-top-bar height60">
+                <div class="d-flex align-items-center justify-content-end height60">
+                    <div class="d-inline-block icono">
                         <i class="zmdi zmdi-search" onclick="showSearchBar();"></i>
                     </div>
-                    <div class="d-inline-block icono mr-2">
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="d-inline-block icono">
+                        <i class="zmdi zmdi-apps"></i>
+                    </div>
+                    <div class="d-inline-block icono">
+                        <i class="zmdi zmdi-globe"></i>
+                    </div>
+                    <div class="d-inline-block icono">
+                        <i class="far fa-comments"></i>
                     </div>
                 </div>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <nav id="sidebar">
+                <!-- Sidebar Header -->
+                <div class="sidebar-header">
+                    <div class="contenidoUsuario px-3 d-flex align-items-center">
+                        <div class="imagenPerfilUsuario">
+                            <img src="{{ asset('assets/img/usuario.jpg') }}" alt="Imagen de Perfil">
+                        </div>
+                        <div class="datosPerfilUsuario">
+                            <a href="#">Jessica Rodríguez</a>
+                            <a href="#">JessicaR@Gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="controlSesionUsuario pt-3">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="zmdi zmdi-power"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="zmdi zmdi-account"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="zmdi zmdi-key"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="zmdi zmdi-settings"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar Links -->
+                <ul class="navElements">
+                    <li class="navItem {% block ResumenGeneralActivo %}{% endblock %}">
+                        <a href="#"><i class="far fa-chart-bar"></i> Resumen General</a>
+                    </li>
+                    <li class="navItem {% block PlataformaActivo %}{% endblock %}">
+                        <a href="#"><i class="fas fa-stream"></i> Plataforma</a>
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#gestionSocios" class="navItem collapsed {% block GestionSociosActivo %}{% endblock %}">
+                        <a href="#"><i class="fas fa-users"></i> Getión de Socios</a>
+                    </li>
+                        <ul class="sub-menu collapse" id="gestionSocios">
+                            <li>
+                                <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Socios</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Registrar socio(a)</a>
+                            </li>
+                        </ul>
+
+                    <li class="navItem {% block CajaActivo %}{% endblock %}">
+                        <a href="#"><i class="fas fa-cash-register"></i> Caja</a>
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#aportaciones" class="navItem collapsed {% block AportacionesActivo %}{% endblock %}">
+                        <a href="#"><i class="fas fa-dollar-sign"></i> Aportaciones</a>
+                    </li>
+                        <ul class="sub-menu collapse" id="aportaciones">
+                            <li>
+                                <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Aportaciones</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Aportaciones</a>
+                            </li>
+                        </ul>
+
+                    <li data-toggle="collapse" data-target="#ahorros" class="navItem collapsed {% block AhorrosActivo %}{% endblock %}">
+                        <a href="#"><i class="fas fa-piggy-bank"></i> Ahorros</a>
+                    </li>
+                        <ul class="sub-menu collapse" id="ahorros">
+                            <li>
+                                <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Cuentas de Ahorro</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Ahorro</a>
+                            </li>
+                        </ul>
+
+                    <li data-toggle="collapse" data-target="#inversiones" class="navItem collapsed {% block CtaInversionesActivo %}{% endblock %}">
+                        <a href="#"><i class="fas fa-file-invoice-dollar"></i> Inversiones</a>
+                    </li>
+                        <ul class="sub-menu collapse" id="inversiones">
+                            <li>
+                                <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Ctas. Inversiones</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Inversiones</a>
+                            </li>
+                        </ul>
+                </ul>
+            </nav>
+            <div id="content">
+                <main>
+                    <div class="container-fluid pageHeader">
+                        {% block tituloPagina %}{% endblock %}
+                    </div>
+                    {% block body %}{% endblock %}
+                </main>
             </div>
         </div>
-        <div class="right-top-bar height60">
-            <div class="d-flex align-items-center justify-content-end height60">
-                <div class="d-inline-block icono">
-                    <i class="zmdi zmdi-search" onclick="showSearchBar();"></i>
-                </div>
-                <div class="d-inline-block icono">
-                    <i class="zmdi zmdi-apps"></i>
-                </div>
-                <div class="d-inline-block icono">
-                    <i class="zmdi zmdi-globe"></i>
-                </div>
-                <div class="d-inline-block icono">
-                    <i class="far fa-comments"></i>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="wrapper">
-        <nav id="sidebar">
-            <!-- Sidebar Header -->
-            <div class="sidebar-header">
-                <div class="contenidoUsuario px-3 d-flex align-items-center">
-                    <div class="imagenPerfilUsuario">
-                        <img src="{{ asset('assets/img/usuario.jpg') }}" alt="Imagen de Perfil">
-                    </div>
-                    <div class="datosPerfilUsuario">
-                        <a href="#">Jessica Rodríguez</a>
-                        <a href="#">JessicaR@Gmail.com</a>
-                    </div>
-                </div>
-                <div class="controlSesionUsuario pt-3">
-                    <ul>
-                        <li>
-                            <a href="#"><i class="zmdi zmdi-power"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="zmdi zmdi-account"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="zmdi zmdi-key"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="zmdi zmdi-settings"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Sidebar Links -->
-            <ul class="navElements">
-                <li class="navItem {% block ResumenGeneralActivo %}{% endblock %}">
-                    <a href="#"><i class="far fa-chart-bar"></i> Resumen General</a>
-                </li>
-                <li class="navItem {% block PlataformaActivo %}{% endblock %}">
-                    <a href="#"><i class="fas fa-stream"></i> Plataforma</a>
-                </li>
-
-                <li data-toggle="collapse" data-target="#gestionSocios" class="navItem collapsed {% block GestionSociosActivo %}{% endblock %}">
-                    <a href="#"><i class="fas fa-users"></i> Getión de Socios</a>
-                </li>
-                    <ul class="sub-menu collapse" id="gestionSocios">
-                        <li>
-                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Socios</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Registrar socio(a)</a>
-                        </li>
-                    </ul>
-
-                <li class="navItem {% block CajaActivo %}{% endblock %}">
-                    <a href="#"><i class="fas fa-cash-register"></i> Caja</a>
-                </li>
-
-                <li data-toggle="collapse" data-target="#aportaciones" class="navItem collapsed {% block AportacionesActivo %}{% endblock %}">
-                    <a href="#"><i class="fas fa-dollar-sign"></i> Aportaciones</a>
-                </li>
-                    <ul class="sub-menu collapse" id="aportaciones">
-                        <li>
-                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Aportaciones</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Aportaciones</a>
-                        </li>
-                    </ul>
-
-                <li data-toggle="collapse" data-target="#ahorros" class="navItem collapsed {% block AhorrosActivo %}{% endblock %}">
-                    <a href="#"><i class="fas fa-piggy-bank"></i> Ahorros</a>
-                </li>
-                    <ul class="sub-menu collapse" id="ahorros">
-                        <li>
-                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Cuentas de Ahorro</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Ahorro</a>
-                        </li>
-                    </ul>
-
-                <li data-toggle="collapse" data-target="#inversiones" class="navItem collapsed {% block CtaInversionesActivo %}{% endblock %}">
-                    <a href="#"><i class="fas fa-file-invoice-dollar"></i> Inversiones</a>
-                </li>
-                    <ul class="sub-menu collapse" id="inversiones">
-                        <li>
-                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Ver Lista de Ctas. Inversiones</a>
-                        </li>
-                        <li>
-                            <a href="#" class="sub-menu-a"><i class="fas fa-angle-right"></i> Crear Cta. Inversiones</a>
-                        </li>
-                    </ul>
-            </ul>
-        </nav>
-    </div>
-
-        {% block body %}{% endblock %}
 
         <script src="{{ asset('assets/js/jquery-3.3.1.js') }}"></script>
         <script src="{{ asset('assets/js/jquery-3.3.1.slim.min.js') }}"></script>

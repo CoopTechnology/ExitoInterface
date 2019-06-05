@@ -7,14 +7,14 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class InicioController extends Controller{
+class ResumenGeneralController extends Controller{
 
     /**
-     * @Route("/inicio")
+     * @Route("/")
      * @Method({"GET"})
      */
 
     public function indexAction() {
-        return $this->render('base.html.twig');
+        return $this->render('dashboard/dashboard.html.twig');
     }
 }

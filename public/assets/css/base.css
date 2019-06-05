@@ -31,7 +31,12 @@
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.21);
     background-color: var(--grisIconos);
 }
-
+.mtop60{
+    margin-top: 60px;
+}
+#content{
+    width: 100%;
+}
 /* ========= GLOBALES ========== */
 body{
     background-color: var(--grisClaro);
@@ -119,4 +124,17 @@ div#top-search-bar{
     background-color: white;
     position: fixed;
     animation-duration: 0.3s;
+}
+main div.pageHeader{
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: var(--grisOscuroClaro);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 0.85rem 3rem 0.3rem 3rem;
+    margin-bottom: 20px;
+}
+main div.pageContent{
+    width: 100%;
+    margin-bottom: 20px;
 }

@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/resumenGeneral.css') }}">
+{% endblock %}
+{% block title %}Dashboard{% endblock %}
+{% block ResumenGeneralActivo %}itemActive{% endblock %}
+{% block tituloPagina %}
+    <h2 class="h3">Resumen General</h2>
+    <p>Texto descriptivo para esta parte...</p>
+{% endblock %}
+{% block body %}
+    <div class="container-fluid">
+        <div class="pageContent">
+            <div class="charts">
+                <div class="chart mx-2">
+                    <div class="datosAnualesHead">
+                        <h3 class="h5">Year's Stats</h3>
+                        <p>Total earnings and items sales today</p>
+                    </div>
+                    <div class="datosAnualesMiddle">
+                        <ul>
+                            <li><label>Earning:</label> $400 USD</li>
+                            <li><label>Items Sold:</label> 20 Items </li>
+                            <li><label>Last Hour Sales:</label> $34 USD </li>
+                        </ul>
+                    </div>
+                    <div class="datosAnualesFooter">
+
+                    </div>
+                </div>
+                <div class="chart mx-2">
+                    <div class="datosMensualesHead">
+                        <h3 class="h5">Monthly Stats</h3>
+                        <p>Monthly earnings and items sales</p>
+                    </div>
+                    <div class="datosMensualesMiddle">
+                        <ul>
+                            <li><label>Earning:</label> $5,000 USD</li>
+                            <li><label>Items Sold:</label> 400 Items </li>
+                            <li><label>Last Month Earning:</label> $2,434 USD </li>
+                        </ul>
+                    </div>
+                    <div class="datosMensualesFooter">
+
+                    </div>
+                </div>
+                <div class="chart mx-2">
+                    <div class="datosDiariosHead">
+                        <h3 class="h5">Daily Stats</h3>
+                        <p>Monthly earnings and items sales</p>
+                    </div>
+                    <div class="datosDiariosMiddle">
+                        <ul>
+                            <li><label>Earning:</label> $100 USD</li>
+                            <li><label>Items Sold:</label> 50 Items </li>
+                            <li><label>Day Month Earning:</label> $134 USD </li>
+                        </ul>
+                    </div>
+                    <div class="datosDiariosFooter">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
